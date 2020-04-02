@@ -24,4 +24,13 @@ body {
     min-width: 100vw;
 }
 
+.#signup-container {
+    border-radius: 20px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px 0 grey;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
 

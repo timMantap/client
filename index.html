@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="google-signin-client_id" content="498987828455-0q3r2pvouhnp0niktcq6hleval8g5ekv.apps.googleusercontent.com">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -27,10 +31,65 @@
        </div>
 
        <div id="right-container">
-        <button type="button" id="edit-task" class="btn btn-success m-1" onclick="">Logout</button>
+        <button type="button" id="edit-task" class="btn btn-success m-1" onclick="signOut()">Logout</button>
        </div>
       </nav>
 
+      <div class="container-fluid">
+        <div id="signin-container" class="auth-container">
+            <form action="" id="login-form" class="auth-form">
+                <img src="https://cdn5.f-cdn.com/contestentries/305930/15770551/564f6c4164de6_thumb900.jpg" alt="landingpage-avatar" style="height: 30vh;">
+                <h3>Welcome to FoodPedia!</h3>
+                <div class="auth-notifications"></div>
+                <div class="ui small input">
+                    <input type="text" name="email" id="email-signin" placeholder="email..." autocomplete="off">
+                </div>
+                <br>
+                <div class="ui small input">
+                    <input type="password" name="password" id="password-signin" placeholder="password...">
+                </div>
+                <br>
+                <div class="buttongroup-horizontal">
+                    <button class="ui primary button" id="signin-btn" type="submit">
+                      sign in
+                  </button>
+                  <div class="g-signin2" data-onsuccess="onSignIn">sign in with google</div>
+
+                </div>
+
+                <p class="confirmation">new to FoodPedia? Register now!</p>
+                <button class="ui orange basic button" id="signup-bottom-btn">
+                  sign up
+              </button>
+            </form>
+        </div>
+
+        <div id="signup-container" class="auth-container">
+            <form action="" id="signup-form" class="auth-form">
+                <img src="https://cdn5.f-cdn.com/contestentries/305930/15770551/564f6c4164de6_thumb900.jpg" alt="landingpage-avatar" style="height: 30vh">
+                <h3>Welcome to FoodPedia!</h3>
+                <div class="auth-notifications"></div>
+
+                <div class="ui small input">
+                    <input type="text" id="email-signup" name="email" placeholder="email..." autocomplete="off">
+                </div>
+                <br>
+                <div class="ui small input">
+                    <input type="password" id="password-signup" name="password" placeholder="password...">
+                </div>
+                <br>
+                <button class="ui primary button" id="signup-btn" type="submit">
+                  sign up
+              </button>
+
+                <p class="confirmation">already have an FoodPedia account?</p>
+                <button class="ui orange basic button" id="signin-bottom-btn">
+                  sign in
+              </button>
+
+            </form>
+        </div>
+    </div>
 
       <!-- content -->
       <div id="page-content-wrapper-food">
@@ -106,6 +165,8 @@
             </div>
           </div>
       </div>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+
       <script src="main.js"></script>
 </body>
 </html>
