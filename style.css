@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: scroll;
+}::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
+
+#navbar {
+    top: 0;
+    position: fixed;
+    min-width: 100vw;
+    z-index: 999999;
+}
+
+#page-content-wrapper-food {
+    margin-top: 60px;
+}
+
+#card-container {
+    min-width: 100vw;
+}
+
+
