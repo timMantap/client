@@ -149,7 +149,7 @@
                 </div>
 
                 <p class="confirmation">new to FoodPedia? Register now!</p>
-                <button class="ui orange basic button" id="signup-bottom-btn">
+                <button class="ui orange basic button" id="signup-bottom-btn" onclick="toSignup(event)">
                   sign up
               </button>
             </form>
@@ -169,12 +169,12 @@
                     <input type="password" id="password-signup" name="password" placeholder="password...">
                 </div>
                 <br>
-                <button class="ui primary button" id="signup-btn" type="submit">
+                <button class="ui primary button" id="signup-btn" type="submit" >
                   sign up
               </button>
 
                 <p class="confirmation">already have an FoodPedia account?</p>
-                <button class="ui orange basic button" id="signin-bottom-btn">
+                <button class="ui orange basic button" id="signin-bottom-btn" onclick="toSignin(event)">
                   sign in
               </button>
 
@@ -198,7 +198,7 @@
        </div>
 
        <div id="right-container">
-        <button type="button" id="edit-task" class="btn btn-success m-1" onclick="signOut()">Logout</button>
+        <button type="button" id="edit-task" class="btn btn-success m-1" onclick="signOut(event)">Logout</button>
        </div>
       </nav>
       <div id="page-content-wrapper-food">

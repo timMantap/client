@@ -24,7 +24,7 @@ body {
     min-width: 100vw;
 }
 
-.#signup-container {
+#signup-container {
     border-radius: 20px;
     background-color: whitesmoke;
     box-shadow: 5px 5px 5px 0 grey;
@@ -34,3 +34,14 @@ body {
     flex-direction: column;
 }
 
+@media (min-width: 768px) {
+    #card-container {
+        width: 300px;
+    } 
+}
+
+/* 
+#img-container {
+    min-width: 200px;
+} */
+/* 
