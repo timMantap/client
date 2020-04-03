@@ -31,10 +31,11 @@
       <div class="limiter">
         <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
           <div id="signin-container" class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-            <form class="login100-form validate-form flex-sb flex-w">
+            <form class="login100-form validate-form flex-sb flex-w" id="signup-form">
               <span class="login100-form-title p-b-53">
                 Welcome to FoodPedia
               </span>
+  
   
               
               <div class="p-t-31 p-b-9">
@@ -77,10 +78,11 @@
             </form>
           </div>
           <div id="signup-container" class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-            <form class="login100-form validate-form flex-sb flex-w">
+            <form class="login100-form validate-form flex-sb flex-w" id="login-form">
               <span class="login100-form-title p-b-53">
                 Welcome to FoodPedia
               </span>
+
   
               
               <div class="p-t-31 p-b-9">
@@ -149,7 +151,7 @@
                 </div>
 
                 <p class="confirmation">new to FoodPedia? Register now!</p>
-                <button class="ui orange basic button" id="signup-bottom-btn">
+                <button class="ui orange basic button" id="signup-bottom-btn" onclick="toSignup(event)">
                   sign up
               </button>
             </form>
@@ -169,12 +171,12 @@
                     <input type="password" id="password-signup" name="password" placeholder="password...">
                 </div>
                 <br>
-                <button class="ui primary button" id="signup-btn" type="submit">
+                <button class="ui primary button" id="signup-btn" type="submit" >
                   sign up
               </button>
 
                 <p class="confirmation">already have an FoodPedia account?</p>
-                <button class="ui orange basic button" id="signin-bottom-btn">
+                <button class="ui orange basic button" id="signin-bottom-btn" onclick="toSignin(event)">
                   sign in
               </button>
 
@@ -184,24 +186,23 @@
     <div id="mainpage">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark d-flex justify-content-lg-between" id="navbar">
         <!-- Brand/logo -->
-       <div id="left-cointainer" class="d-flex justify-content-center">
-        <a class="navbar-brand mr-5" href="#">Food For Sake</a>
-        <!-- Links -->
-        <ul class="navbar-nav">
-        </ul>
-       </div>
+        <div id="left-cointainer" class="d-flex justify-content-center">
+          <a class="navbar-brand mr-5" href="#">Food For Sake</a>
+        </div>
 
-       <div id="right-container">
-        <button type="button" id="edit-task" class="btn btn-success m-1" onclick="signOut()">Logout</button>
-       </div>
+        <div id="mid-container" class="d-flex justify-content-center">
+        </div>
+
+        <div id="right-container">
+          <button type="button" id="edit-task" class="btn btn-success m-1" onclick="signOut(event)">Logout</button>
+        </div>
       </nav>
       <div id="page-content-wrapper-food">
         <div class="container-fluid">
           <div class="row d-flex justify-content-center" id="card-container">
-              </div>
           </div>
         </div>
-    </div>
+      </div>
     </div>
      
       <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -218,8 +219,8 @@
       <script src="vendor/daterangepicker/moment.min.js"></script>
       <script src="vendor/daterangepicker/daterangepicker.js"></script>
       <script src="vendor/countdowntime/countdowntime.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="js/main.js"></script>
-
       <script src="main.js"></script>
 </body>
 </html>

@@ -16,15 +16,21 @@ body {
     z-index: 999999;
 }
 
+.navbar-brand {
+    font-family: "lobster", cursive;
+    font-size: 100px;
+}
+
 #page-content-wrapper-food {
-    margin-top: 60px;
+    margin-top: 180px;
 }
 
 #card-container {
     min-width: 100vw;
+    
 }
 
-.#signup-container {
+#signup-container {
     border-radius: 20px;
     background-color: whitesmoke;
     box-shadow: 5px 5px 5px 0 grey;
@@ -33,4 +39,47 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+@media (min-width: 768px) {
+    #card-container {
+        width: 300px;
+    } 
+}
+
+#weather-content p{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+#weather-content h5{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#weather-content p{
+    color: gold;
+}
+#mid-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+.card {
+    box-shadow: 5px 5px 5px 0 grey;
+}
+
+.auth-notifications {
+    margin: .5vh;
+}
+
+
+/* 
+#img-container {
+    min-width: 200px;
+} */
+/* 
+
 
