@@ -20,6 +20,7 @@ const hideShowElement = (target, hide, show) => {
     })
 }
 
+
 function auth() {
     if (localStorage.getItem('token')) {
         hideElement('.limiter')
@@ -64,7 +65,6 @@ $('#signup-btn').click(e => {
     })
     .fail(err => {
         console.log(err)
-        // formnotif(err.responseJSON.errors[0].message)
     })
 })
 
@@ -146,5 +146,3 @@ const readMain = () => {
         // })
     })
 }
-
-
