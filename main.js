@@ -20,13 +20,11 @@ const hideShowElement = (target, hide, show) => {
 
 function auth() {
     if (localStorage.getItem('token')) {
-        hideElement('#signup-container')
-        hideElement('#signin-container')
-        $( '#page-content-wrapper-food' ).show()
-        $( '#navbar' ).show()
+        hideElement('.limiter')
+        $( '#mainpage' ).show()
     } else {
-        $( '#page-content-wrapper-food' ).hide()
-        $( '#navbar' ).hide()
+        $( '#mainpage' ).hide()
+        showElement('.limiter')
         showElement('#signup-container')
         hideElement('#signin-container')
         hideShowElement('#signup-bottom-btn','#signin-container','#signup-container')
@@ -45,15 +43,15 @@ function signOut() {
 
 $('#signup-btn').click(e => {
     e.preventDefault()
-    if($('#email-signup').val() == '' || $('#password-signup').val() == '') {
-        return $('.auth')
-    }
+    // if($('#email-signup').val() == '' || $('#password-signup').val() == '') {
+    //     return $('.auth')
+    // }
     $.ajax({
         method:'post',
         url: 'http://localhost:3000/users/register',
         data: {
             email: $('#email-signup').val(),
-            password: $('#password-signup').val(),
+            password: $('#password-signup').val()
         }
     })
     .done(result => {
@@ -62,7 +60,7 @@ $('#signup-btn').click(e => {
     })
     .fail(err => {
         console.log(err)
-        formnotif(err.responseJSON.errors[0].message)
+        // formnotif(err.responseJSON.errors[0].message)
     })
 })
 
